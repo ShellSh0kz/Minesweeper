@@ -1,0 +1,78 @@
+<Project>
+  <Name>MineSweeper</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>MSWEEPERMain</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Board</Name>
+        <Access>Public</Access>
+        <Location left="312" top="91" />
+        <Size width="162" height="366" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private int _length</Member>
+        <Member type="Field">private int _width</Member>
+        <Member type="Field">private int _mines</Member>
+        <Member type="Field">private Cell[,] _cells</Member>
+        <Member type="Field">private bool _gameover</Member>
+        <Member type="Field">private bool _gamewin = false</Member>
+        <Member type="Method">private bool ValidGame()</Member>
+        <Member type="Method">public void Click(Point cursorPos, char type)</Member>
+        <Member type="Method">private void GenerateBoard()</Member>
+        <Member type="Method">private void UpdateCells(int x, int y)</Member>
+        <Member type="Method">public void ConsolePrintBoard()</Member>
+        <Member type="Method">public void RenderBoard(PaintEventArgs e)</Member>
+        <Member type="Method">public void Show(int x, int y)</Member>
+        <Member type="Method">public void GameOver()</Member>
+        <Member type="Method">public void CheckWin()</Member>
+        <Member type="Constructor">public Board(int len, int wid, int mines)</Member>
+        <Member type="Constructor">public Board(int gameNO)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Cell</Name>
+        <Access>Public</Access>
+        <Location left="586" top="137" />
+        <Size width="162" height="298" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private int x</Member>
+        <Member type="Field">private int y</Member>
+        <Member type="Field">private int _num</Member>
+        <Member type="Field">private Box grapics</Member>
+        <Member type="Property">public int Num { get; set; }</Member>
+        <Member type="Property">public bool flag { get; set; }</Member>
+        <Member type="Method">public bool CheckLoss()</Member>
+        <Member type="Method">public void Show()</Member>
+        <Member type="Method">public bool isHidden()</Member>
+        <Member type="Method">public void placeFlag()</Member>
+        <Member type="Method">public void Inc()</Member>
+        <Member type="Method">public void Render(PaintEventArgs e, int sides)</Member>
+        <Member type="Constructor">public Cell(int x, int y)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Box</Name>
+        <Access>Public</Access>
+        <Location left="851" top="162" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public Box(int type, int value)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="0" second="1">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1..*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Generalization" first="2" second="1">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
